@@ -1,41 +1,38 @@
 
 function addIt(a, b) {
-    return a + b ;
+   console.log (a + b)
 }
-let addition = addIt(2, 4) ;
-document.getElementById("Math").innerHTML= addition;
-
-// which would work better?
+// simple addition
 
 function subIt(a, b) {
-    let result = a - b ;
-    document.getElementById("Math").innerHTML = result ;
+    console.log(a - b)
 }
 
 function isItDivisible(a, b) {
     if (b == 0) {
-    window.alert("Not Divisible")
+    console.log("Not Divisible")
     }
     else { 
         let result = a / b ;
-        document.getElementById("Math").innerHTML= result ;
+        console.log(result);
     }
 }
+// can handle dividing by 0
 
 function multiplier(a) {
     for(let i = 0; i < 5; i++) {
         let results = a * i ;
-        document.getElementById("Math").innerHTML= results + "<br>" ;
+        console.log(results)
     }
+}
+// this multiplier returns multiple results
 
+function hello(name) {
+    console.log("Hello" + " "+ name + "!") ;
 }
 
-function Hello() {
-    let text ;
-    let person = window.prompt("What's Your Name?", "T-Rex Ron")
-    if(person == ""){
-        text = "Canceled"
-    } else {
-        text = "Hello" + person + "!"
-    }
-}git
+hello("Eva")
+console.log(addIt(1,"two"))
+console.log(multiplier("two"))
+console.log(multiplier(3000))
+console.log(isItDivisible("three"))
