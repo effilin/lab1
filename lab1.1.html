@@ -1,0 +1,92 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Module 1 Exercise 3</title>
+        <style>
+            body {
+                font-family: sans-serif;
+                margin: 0;
+            }
+            .container{
+                display: flex ;
+                min-height: 100vh ;
+                align-items: stretch;
+            }
+            .column {
+                background: goldenrod;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                flex: 1;
+                
+            }
+            .changer {
+                background-color: palevioletred;
+                border: 5px solid pink;
+                border-radius: 5px;
+                padding: 2px;
+                text-align: center;
+                outline: whitesmoke solid 2px;
+                position: relative;
+                animation: bye;
+                animation-duration: 4s;
+                animation-timing-function: ease-in;
+                animation-direction: alternate;
+            }
+
+            @keyframes bye {
+                0%{right: 0px; left:0px; top:0px; }
+                20%{right: 0px; left: 20px; top:0px; }
+                40%{right: 0px; left: 20px; top: 100px; }
+                60%{ right: 40px; left: 0px; top: 100px; }
+                80%{ right: 40px; left: 0px; top: 0px; }
+                100%{ right: 20px; left: 0px; top: 0px; }
+                
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+
+            <div class="column" id="column1">
+
+                <h1 id="heading1">Hello</h1>
+                <button class="changer" id="changer1" onclick= "change1()">Mix it up!</button>
+            </div>
+
+            <div class="column" id="column2">
+                <h1 id="heading2">World</h1>
+                <button class="changer" id="changer2" onclick="changeMe2()">Mix it down!</button>
+            </div>
+
+        </div>
+        <p id="Math>"></p>
+        <script>
+            function changeMe2() {
+                document.getElementById("column2").style.backgroundColor="rgb(255, 255, 121)" ;
+                window.alert("Thank you") ;
+                document.getElementById("heading2").innerHTML="Good Bye!";
+                document.getElementById("heading2").style.color="dodgerblue" ;
+                document.getElementById("changer2").style.border="rgb(255, 255, 0)" ;
+                document.getElementById("changer2").style.backgroundColor="dodgerblue" ;
+            }
+            function change1() {
+                document.getElementById("changer1").style.backgroundColor="rgb(255, 0, 0)" ;
+                document.getElementById("changer1").style.border="rgb(255, 255, 0)" ;
+                window.alert("Boom!") ;
+                document.getElementById("column1").style.color= "red" ;
+                document.getElementById("heading1").innerHTML= "Good Day!" ;
+                document.getElementById("column1").style.backgroundColor="rgb(255, 255, 121)"
+            }
+
+      
+
+        </script>
+
+    </body>
+
+</html>
